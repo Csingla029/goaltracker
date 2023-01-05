@@ -8,8 +8,12 @@ const CourseForm = (props) => {
     }
     const submitHandler = (event) =>{
         event.preventDefault();
-        console.log("enteredvalue");
-        console.log(enteredvalue);
+        // console.log("enteredvalue");
+        // console.log(enteredvalue);
+        if (enteredvalue.trim().length === 0)
+        {
+            return;
+        }
         props.onAddgoal(enteredvalue);
     }
     return(
